@@ -5,19 +5,56 @@
 html {
   background-color: #205e5d; }
 
-body {
-  background-image: url("images/rock.jpg");
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position-x: 100px;
-  background-position-y: 100px; }
-  body .container {
-    height: 100vh;
-    margin: 0 auto;
-    background-color: rgba(255, 0, 0, 0.1);
-    max-width: 1140px;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(3, 33%); }
+@media (min-width: 1281px) {
+  body {
+    background-image: url("images/rock.jpg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position-x: -512px;
+    background-position-y: 0; }
+    body .container {
+      height: 670px;
+      margin: 0 auto;
+      background-color: rgba(255, 0, 0, 0.1);
+      max-width: 1140px;
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
+      grid-template-rows: 70px repeat(3, 33%) 70px; }
+      body .container .background {
+        background-image: url("images/background.jpg");
+        background-color: red;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 2/5;
+        grid-row: 1/5;
+        background-position-x: -50px; }
+      body .container .rocket {
+        grid-column: 4/5;
+        grid-row: 1/3;
+        position: relative;
+        left: -180px;
+        z-index: 1;
+        clip-path: inset(0 0 0 180px); }
+      body .container .visa {
+        color: white;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        z-index: 1;
+        font-size: 4rem; }
+      body .container .logo {
+        margin: auto auto;
+        grid-column: 1/2;
+        grid-row: 1/3; }
+      body .container .slider {
+        background-color: #252839;
+        grid-column: 3/4;
+        grid-row: 4/6;
+        z-index: 3; }
+      body .container .your-trip {
+        background-color: rgba(29, 55, 60, 0.5);
+        grid-column: 2/3;
+        grid-row: 1/4;
+        z-index: 1;
+        color: white; } }
 
 /*# sourceMappingURL=style.css.map */
